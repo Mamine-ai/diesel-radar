@@ -7,7 +7,9 @@ authors = [
     { name = "Mamine-ai" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "python-dotenv>=1.2.4",
+]
 
 [project.scripts]
 diesel-radar = "diesel_radar:main"
@@ -15,3 +17,8 @@ diesel-radar = "diesel_radar:main"
 [build-system]
 requires = ["uv_build>=0.13.8,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
