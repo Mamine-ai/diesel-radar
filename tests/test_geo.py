@@ -1,4 +1,4 @@
-from geo import haversine_km, in_study_region
+from diesel_radar.geo import haversine_km,  dist_to_kehl_km, in_study_region
 
 def test_strasbourg_inside():
     assert in_study_region(48.5734, 7.7521) is True
