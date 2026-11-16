@@ -1,4 +1,4 @@
-# diesel-radar
+# Diesel-Radar
 
 Fuel price analytics pipeline for the Kehl border region (Germany / France).
 
