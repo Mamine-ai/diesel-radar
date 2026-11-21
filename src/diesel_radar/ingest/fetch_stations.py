@@ -1,7 +1,8 @@
 import json
 
 import httpx
-from config import RAW, get_secret
+
+from diesel_radar.config import RAW, get_secret
 
 
 def fetch_stations() -> list[dict]:
