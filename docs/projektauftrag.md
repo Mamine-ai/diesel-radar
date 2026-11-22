@@ -18,7 +18,7 @@ Wann und wo sollen unsere Fahrzeuge tanken, damit die Dieselkosten sinken,
 ohne dass Touren länger werden?
 
 ## Entscheidung, die besser werden soll
-Tankregel für Fahrer und dDIspostion: an wlechen Tankstellen (DE/FR) und zu welchen Zeit soll getankt wird
+Tankregel für Fahrer und Disposition: an welchen Tankstellen (DE/FR) und zu welcher Zeit getankt werden soll
 
 
 
