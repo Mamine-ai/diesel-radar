@@ -1,5 +1,6 @@
 # Projektauftrag: Diesel-Radar Oberrhein
-Stand: 22.11.2026  · Version 1 · Ansprechpartner: Mohammed Laabidi
+Stand: 22.11.2026  · Version 2  · Ansprechpartner: Mohammed Laabidi
+Änderungen V2: kernfrage (Umwege), Umwegkosten, Hypothesen widerlegbar, Ausgangswert, FR-Quelle
 
 
 ## Flotte (fiktive Beispieldaten aus Startkarte 1.1)
@@ -14,8 +15,7 @@ Stand: 22.11.2026  · Version 1 · Ansprechpartner: Mohammed Laabidi
 
 
 ## Kernfrage (ein Satz)
-Wann und wo sollen unsere Fahrzeuge tanken, damit die Dieselkosten sinken,
-ohne dass Touren länger werden?
+Wann und wo sollen unsere LKW im Raum Kehl/Strasbourg tanken, damit die Dieselkosten sinken, wobei ein Umweg nur erlaubt ist, wenn die Ersparnis größer ist als die Umwegkosten?
 
 ## Entscheidung, die besser werden soll
 Tankregel für Fahrer und Disposition: an welchen Tankstellen (DE/FR) und zu welcher Zeit getankt werden soll
@@ -23,12 +23,24 @@ Tankregel für Fahrer und Disposition: an welchen Tankstellen (DE/FR) und zu wel
 
 
 ## KPI
-- Hauptkennzahl: Ø Dieselpreis bezahlt (ct/l), Ausgangswert: ca. 210 ct/l (Zeitraum: Stichprobe 21.11.2026, vorläufig – wird durch Ø der ersten 4 Wochen Zeitreihe ersetzt)
-- Folgekennzahl: Dieselkosten €/100 km (Ausgangswert: 33 l × 2,10 €/l ≈ 69,30 €/100 km, vorläufig)
-- Messung: automatisch über die Pipeline (fetch_prices → DuckDB → dbt), täglich aktualisiert
+
+- Hauptkennzahl: Ersparnis ggü. Markt (ct/l) = Marktpreis − bezahlter Preis
+
+- Marktpreis: Ø Dieselpreis aller Stationen im Umkreis von 30 km um Kehl, im gleichen Zeitraum, ungewichtet
+
+- Bezahlter Preis: Ø Dieselpreis der Flotte, gewichtet nach getankten Litern
+
+- Ausgangswert: 0 ct/l (Annahme: Die Flotte tankt heute zum Marktdurchschnitt, fiktiv)
+
+- Zusatzinfo: absoluter Ø-Preis Oktober 2026 (ca. 210 ct/l, historische Tankerkönig-Daten, Wert in M2)
+
+- Messung: automatisch über die Pipeline (DuckDB → dbt), täglich aktualisiert
+
+
+
 
 ## Erfolg / Abbruch
-- Erfolg: ≥ 3 ct/l Ersparnis ggü. Ausgangswert, entspricht ≥ 47.520 €/Jahr (Szenario "Ziel")
+- Erfolg: ≥ 3 ct/l Ersparnis unter Marktpreis, entspricht ≥ 47.520 €/Jahr (Szenario "Ziel")
 - Abbruch: Datenabdeckung < 80 % oder Ersparnis < Umwegkosten
 - Umwegkosten: 1 km Umweg ≈ 0,33 l ≈ 0,69 € Diesel (zzgl. Fahrerzeit)
 
