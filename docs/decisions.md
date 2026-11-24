@@ -1,7 +1,7 @@
 # Entscheidungsprotokoll (Decision Log)
 
 ## 001 – Projektauftrag Version 2 freigegeben
-- Datum: 22.11.2026
+- Datum: 24.11.2026
 - Status: angenommen
 - Kontext: Version 1 enthielt Tippfehler, einen Widerspruch (Kernfrage vs. H4), nicht widerlegbare Hypothesen und einen Ausgangswert aus nur einem Tag.
 - Entscheidung: Projektauftrag wird als Version 2 überarbeitet und freigegeben.
