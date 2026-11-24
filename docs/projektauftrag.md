@@ -42,22 +42,26 @@ Tankregel für Fahrer und Disposition: an welchen Tankstellen (DE/FR) und zu wel
 ## Erfolg / Abbruch
 - Erfolg: ≥ 3 ct/l Ersparnis unter Marktpreis, entspricht ≥ 47.520 €/Jahr (Szenario "Ziel")
 - Abbruch: Datenabdeckung < 80 % oder Ersparnis < Umwegkosten
-- Umwegkosten: 1 km Umweg ≈ 0,33 l ≈ 0,69 € Diesel (zzgl. Fahrerzeit)
+- Umwegkosten = 2 × Umweg-km × 0,33 l × Dieselpreis + Umwegzeit × Fahrer-Stundensatz (35 €/h, fiktiv)
+- Beispiel Strasbourg: 5 km Umweg → 10 km × 0,33 l × 2,10 € = 6,93 € + 15 min × 35 €/h = 8,75 € → 15,68 € pro Tankstopp
+- Break-even: 15,68 € ÷ 500 l ≈ 3,1 ct/l (ab diesem Preisvorteil lohnt sich der Umweg)
 
 ## Scope
 - Enthalten: Region 30 km um Kehl + Bas-Rhin, Diesel, 2025–2026
 - Nicht enthalten: Routenplanung, Echtzeit-Alarm, andere Kraftstoffe
 
 ## Hypothesen (vorläufig)
-- H1 (entscheidungsrelevant): Diesel ist abends (ca. 18–22 Uhr) günstiger als morgens → Tankzeit
-- H2 (nachrangig): Diesel ist an bestimmten Wochentagen günstiger
-- H3 (entscheidungsrelevant): Freie Tankstellen sind günstiger als große Marken → Stationswahl
-- H4 (entscheidungsrelevant): Tanken in FR spart trotz Umweg → Land/Station
+- H1 (entscheidungsrelevant → Tankzeit): Es gibt eine Tageszeit, zu der Diesel im Ø mind. 3 ct/l günstiger ist als der Tagesdurchschnitt. Widerlegt, wenn der größte Unterschied < 3 ct/l.
+- H2 (nachrangig): An bestimmten Wochentagen ist Diesel im Ø mind. 2 ct/l günstiger. Widerlegt, wenn der Unterschied zwischen Wochentagen < 2 ct/l.
+- H3 (entscheidungsrelevant → Stationswahl): Freie Tankstellen sind im Ø mind. 2 ct/l günstiger als Markentankstellen. Widerlegt, wenn der Unterschied < 2 ct/l.
+- H4 (entscheidungsrelevant → Land/Station): Tanken in FR (Strasbourg) lohnt sich trotz Umweg. Widerlegt, wenn der Ø-Preisvorteil FR kleiner ist als der Break-even (≈ 3,1 ct/l).
 
 ## Annahmen und Risiken
 - Fahrer dürfen Tankstelle wählen: teilweise (nur Stationen nahe der Route); bei "nein" ist die Tankregel nicht umsetzbar
 - Tankkarten-Rabatt: unbekannt, angenommen 0 ct/l (fiktiv); Risiko: Rabatt nur bei bestimmten Marken könnte die Ersparnis aufheben
-- Datenquelle: Tankerkönig liefert nur DE-Preise; für H4 wird eine eigene Open-Data-Quelle für FR benötigt
+- Datenquelle DE: Tankerkönig (Live-API + historische Daten)
+- Datenquelle FR: Prix des carburants (offene Daten der franz. Regierung), Lizenz: Licence Ouverte 2.0
+- Fahrer-Stundensatz: 35 €/h (fiktiv, Annahme)
 - Säulenpreise ≠ bezahlte Preise (Rabatte, Rechnungsstellung)
 
 ## Termine
