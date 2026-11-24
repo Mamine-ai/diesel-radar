@@ -63,6 +63,6 @@ Tankregel für Fahrer und Disposition: an welchen Tankstellen (DE/FR) und zu wel
 - Datenquelle FR: Prix des carburants (offene Daten der franz. Regierung), Lizenz: Licence Ouverte 2.0
 - Fahrer-Stundensatz: 35 €/h (fiktiv, Annahme)
 - Säulenpreise ≠ bezahlte Preise (Rabatte, Rechnungsstellung)
-
+- 500 l pro Tankstopp
 ## Termine
 Durchstich: 13.12.2026 · Entscheidungsrunde: 24.01.2027 · Pilotende: 28.03.2027
