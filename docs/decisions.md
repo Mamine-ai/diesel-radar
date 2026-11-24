@@ -25,3 +25,7 @@
   - Absoluter Preis vs. Oktober 2026: verworfen, weil Ölpreis-Schwankungen das Ergebnis verfälschen.
   - Vergleich mit dem Vormonat: verworfen, weil der Vergleichswert mitwandert und die Ersparnis mit der Zeit immer kleiner erscheint.
   - Vergleich mit dem Vorjahresmonat: verworfen, weil Ölpreis und Marktlage ein Jahr später ganz anders sein können.
+
+
+  - Folgen: docs/projektauftrag.md ist die verbindliche Grundlage für alle weiteren Schritte.
+- Wer: Auftraggeber
