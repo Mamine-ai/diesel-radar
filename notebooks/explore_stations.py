@@ -1,6 +1,5 @@
 import duckdb
 
-
 duckdb.sql(""" 
 
       SELECT 
