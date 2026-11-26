@@ -6,7 +6,8 @@
 - Kontext: Version 1 enthielt Tippfehler, einen Widerspruch (Kernfrage vs. H4), nicht widerlegbare Hypothesen und einen Ausgangswert aus nur einem Tag.
 - Entscheidung: Projektauftrag wird als Version 2 überarbeitet und freigegeben.
 - Alternativen: Version 1 behalten und Fehler später korrigieren (verworfen: Fehler hätten die Analyse verfälscht).
-- Folgen: docs/projektauftrag.md ist die verbindliche Grundlage für alle weiteren Schritte.
+- Folgen: Die Pipline muss zusätzlich den Marktpreis berchnen: den ungewichteten  Ø-Dieselpreis aller Stationen im Umkreis von 30 km um Kehl, im selben Zeitraum wie der bezahlte Preis. Die Flottendaten sind fiktiv, deshalb gilt der Ausgangswert 0 ct/l als Annahme (Flotte tankt zum Marktdurchschnitt), bis echte Tankdaten vorliegen
+
 - Wer: Auftraggeber
 
 
