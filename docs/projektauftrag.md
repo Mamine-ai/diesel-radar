@@ -1,5 +1,5 @@
 # Projektauftrag: Diesel-Radar Oberrhein
-Stand: 22.11.2026  · Version 2  · Ansprechpartner: Mohammed Laabidi
+Stand: 26.11.2026  · Version 2  · Ansprechpartner: Mohammed Laabidi
 Änderungen V2: kernfrage (Umwege), Umwegkosten, Hypothesen widerlegbar, Ausgangswert, FR-Quelle
 
 
